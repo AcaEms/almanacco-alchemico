@@ -1,14 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+[build]
+  command = "npm run build"
+  publish = "build"
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDkQy1V10ALA2jTGzN7X6yQiE-8-p-q9d0",
-  authDomain: "almanacco-alchemico.firebaseapp.com",
-  projectId: "almanacco-alchemico",
-  storageBucket: "almanacco-alchemico.firebasestorage.app",
-  messagingSenderId: "217411889881",
-  appId: "1:217411889881:web:08eb8f2e56cc37bb8d6cc8"
-};
-
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
